@@ -9,6 +9,17 @@
     <meta name="description" content="Week 5 Intro to Tables & Forms">
     
     <title>W5D1 | Tables & Forms </title>
+
+    <style>
+        table td {
+            border:1px solid black;
+        }
+
+    </style>
+
+
+
+
 </head>
 <body>
     
@@ -22,162 +33,95 @@
     <form>
 
         <!--firstname-->
-        <label for="firstname">First Name</label>
-        <input type="text" name="firstname" id="firstname">
-
-         <br>
-        <!--lastname-->
-        <label for="lastname">Last Name:</label>
-        <input type="text" name="lastname" id="lastname">
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName">
 
         <br>
-        <!--email adress-->
+        <!--lastname-->
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName">
+
+
+        <br>
+        <!--email address-->
         <label for="email">Email:</label>
         <input type="text" name="email" id="email">
 
-         <br>
         <br>
-        <!--since there is more than 1 input element, the form NEEDS a submit in order to generate full query string-->
+        <br>
+        <!--since there is more than 1 input element, 
+            the form NEEDS a submit button in order to 
+            generate the full query string-->
         <input type="submit" value="S U B M I T ! :)">
-
-
-
 
     </form>
 
-    <h2>Form w/table [yayyyy]</h2>
-    <!--neater alignment possibilittes-->
+    <h2>Form w/Table [yaaaaaaay]</h2>
+    <!--neater alignment possibilities-->
 
-    <!--form comes First!-->
-    <form method="GET" action="_relative path to an HTML">
+    <!--form comes FIRST!-->
+    <form method="GET" action="_relative path to an HTML_">
         <table>
-            <!--<thread> can be used for column headers-->
+
+            <!--<thead> can be used for column headers-->
 
             <!--<tbody> is REQUIRED inside of a <table>-->
-
             <tbody>
 
-                <!--add data to the table by row-->
-                <tr><!--table ROW; should include one <td> for every possible column (leave the <td></td> blank when no info that row/column)-->
+                <!--add data to the table row by row-->
+                <tr><!--table ROW; should include one <td> for every possible column (leave the <td></td> blank when no info for that row/column)-->
 
                     <!--<td> table data: one individual data cell; one td per column-->
-                        <td><!--first data cell in a row (left)-->
-                            <label for="firstname">First Name</label>
-                        </td>
+                    <td><!--first data cell in row (left)-->
+                        <label for="firstname">First Name:</label>
+                    </td>
 
-                        <td>
-                            <input type="text" name="firstname" id="firstname"> 
-                        </td>
+                    <td><!--second data cell in row (right)-->
+                        <input type="text" name="firstname" id="firstname">
+                    </td>
 
-
-                    
                 </tr>
 
+                <tr>
+                    
+                    <td><!--LABEL-->
+                        <label for="lastname">Last Name:</label>
+                    </td>
 
+                    <td><!--INPUT-->
+                        <input type="text" name="lastname" id="lastname">
+                    </td>
 
+                </tr>
+
+                <tr>
+                    
+                    <td><!--LABEL-->
+                        <label for="eMail">Email:</label>
+                    </td>
+
+                    <td><!--INPUT-->
+                        <input type="text" name="eMail" id="eMail" required >
+                    </td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td><!--LABEL-->
+                        
+                    </td>
+
+                    <td><!--INPUT-->
+                        <input type="submit" value="submit">
+                    </td>
+
+                </tr>
+                
             </tbody>
 
-
-
-
-
         </table>
-
-
-
-
-
+    </form>
     
-
-        <table>
-            <!--<thread> can be used for column headers-->
-
-            <!--<tbody> is REQUIRED inside of a <table>-->
-
-            <tbody>
-
-                <!--add data to the table by row-->
-                <tr><!--table ROW; should include one <td> for every possible column (leave the <td></td> blank when no info that row/column)-->
-
-                    <!--<td> table data: one individual data cell; one td per column-->
-                        <td><!--first data cell in a row (left)-->
-                            <label for="lastname">Last Name</label>
-                        </td>
-
-                        <td>
-                            <input type="text" name="lastname" id="lastname"> 
-                        </td>
-
-
-                    
-                </tr>
-
-
-
-            </tbody>
-
-
-
-
-
-        </table>
-
-
-
-
-
-   
-        <table>
-            <!--<thread> can be used for column headers-->
-
-            <!--<tbody> is REQUIRED inside of a <table>-->
-
-            <tbody>
-
-                <!--add data to the table by row-->
-                <tr><!--table ROW; should include one <td> for every possible column (leave the <td></td> blank when no info that row/column)-->
-
-                    <!--<td> table data: one individual data cell; one td per column-->
-                        <td><!--first data cell in a row (left)-->
-                            <label for="email">email</label>
-                        </td>
-
-                        <td>
-                             <input type="text" name="email" id="email"> 
-                        </td>
-
-
-                    
-                </tr>
-
-
-
-            </tbody>
-
-
-
-
-
-        </table>
-
-
-        <tr><!--table ROW; should include one <td> for every possible column (leave the <td></td> blank when no info that row/column)-->
-
-            <!--<td> table data: one individual data cell; one td per column-->
-                <td><!--first data cell in a row (left)-->
-                   
-                </td>
-
-                <td>
-                    <input type="submit" value="submit">
-                </td>
-
-
-            
-        </tr>
-
-
-
-</form>
 </body>
 </html>
