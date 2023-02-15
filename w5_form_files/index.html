@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <!--The type of font we are using-->
+    <meta charset="UTF-8">
+    <!--Tells the -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Your Name Here">
+    <meta name="description" content="Default HTML Page for SE 111">
+    
+    <link type="text/css" rel="stylesheet" href="style.css">
+
+    <title>Week 5 | Tables and Forms</title>
+</head>
+<body>
+
+    <h1>Basic Form Demo</h1>
+
+    <h2>Form WITHOUT A TABLE [BOOOOOO]</h2>
+
+
+    <!--labels are used to match up the input elements-->
+
+    <form method="GET" action="__file path  to file to open/run">
+
+        <!--firstname-->
+        <label for="firstName">First Name:</label>
+        <input type="text" name="firstName" id="firstName">
+
+        <br>
+        <!--lastname-->
+        <label for="lastName">Last Name:</label>
+        <input type="text" name="lastName" id="lastName">
+
+
+        <br>
+        <!--email address-->
+        <label for="email">Email:</label>
+        <input type="text" name="email" id="email">
+
+        <br>
+        <br>
+        <!--since there is more than 1 input element, 
+            the form NEEDS a submit button in order to 
+            generate the full query string-->
+        <input type="submit" value="S U B M I T ! :)">
+
+    </form>
+
+    <h2>Form w/Table [yaaaaaaay]</h2>
+    <!--neater alignment possibilities-->
+
+    <!--form comes FIRST!-->
+    <form method="GET" action="_relative path to an HTML_">
+        <table>
+
+            <!--<thead> can be used for column headers-->
+
+            <!--<tbody> is REQUIRED inside of a <table>-->
+            <tbody>
+
+                <!--add data to the table row by row-->
+                <tr><!--table ROW; should include one <td> for every possible column (leave the <td></td> blank when no info for that row/column)-->
+
+                    <!--<td> table data: one individual data cell; one td per column-->
+                    <td><!--first data cell in row (left)-->
+                        <label for="firstname">First Name:</label>
+                    </td>
+
+                    <td><!--second data cell in row (right)-->
+                        <input type="text" name="firstname" id="firstname">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td><!--LABEL-->
+                        <label for="lastname">Last Name:</label>
+                    </td>
+
+                    <td><!--INPUT-->
+                        <input type="text" name="lastname" id="lastname">
+                    </td>
+
+                </tr>
+
+                <tr>
+                    
+                    <td><!--LABEL-->
+                        <label for="eMail">Email:</label>
+                    </td>
+
+                    <td><!--INPUT-->
+                        <input type="text" name="eMail" id="eMail" placeholder="email@email.com" >
+                    </td>
+
+
+                </tr>
+
+                 <!--other types of input in rows below-->
+
+                 <tr>
+                    
+                    <td><!--LEFT COLUMN (labels)-->
+                            <label for="comments">Comments</label>
+                    </td>
+
+                    <td><!--RIGHT COLUMN (inputs)-->
+                        <textarea name="comments" placeholder="leave your comment here....."></textarea> 
+                    </td>
+
+
+                </tr>
+
+                <!--Non-Text Based input elements-->
+                 <!--drop down selection- limits to 1 response, limitless options; works similar to a list <ol><ul> with <li>-->
+
+                <tr>
+                    
+                    <td><!--LEFT COLUMN (labels)-->
+                            <label for="faveColor">Pick your Favorite Color</label>
+                    </td>
+
+                    <td><!--RIGHT COLUMN (inputs)-->
+                        <select name="favecolor"><!--creates the drop down-->
+
+                            <!--list of each optiom in drop down-->
+                            <option value="red">RED</option>
+                            <option value="green">GREEN</option>
+                            <option value="blue">BLUE</option>
+
+
+                        </select>
+                    </td>
+
+
+                </tr>
+
+                <!--radio buttons: limited to 1 so long as all name values match: radio buttons are circular like the ones on our quiz-->
+
+                <tr>
+                    
+                    <td><!--LEFT COLUMN (labels)-->
+                        <label for="study">Programs of Study</label>
+                    </td>
+
+                    <td><!--RIGHT COLUMN (inputs)-->
+                        <input type="radio" name="study" value="SE">Software Engineering
+                        <br>
+                        <input type="radio" name="study" value="CYB">Cybersecurity <br>
+                        <input type="radio" name="study" value="WD">Web Development <br>
+                        <input type="radio" name="study" value="NE">Networking <br>
+                    </td>
+
+
+                </tr>
+
+                <!--checkboxes - can select mulriple options (script must be prepared for all)-->
+
+                <tr>
+                    
+                    <td><!--LEFT COLUMN (labels)-->
+                        <label for="vehicle">Select Your Vehicle(s)</label>
+                    </td>
+
+                    <td><!--RIGHT COLUMN (inputs)-->
+                        <input type="checkbox" name="vehicle1" value="car">Car <br>
+                        <input type="checkbox" name="vehicle2" value="roci">Rocinante <br>
+                        <input type="checkbox" name="vehicle3"
+                        value="motorcycle">Mortorcycle <br>
+                        <input type="checkbox" name="vehicle4" value="bike">Bicycle <br>
+                        <input type="checkbox" name="vehicle5" value="dragon">Dragon<br>
+                        <input type="checkbox" name="vehicle6" value="horse">Roach the Horse <br>
+
+                    </td>
+
+
+                </tr>
+                <!--Date-->
+
+
+                <tr>
+                    
+                    <td><!--LEFT COLUMN (labels)-->
+                        <label for="date">Date</label>
+                    </td>
+
+                    <td><!--RIGHT COLUMN (inputs)-->
+                        <input type="date" name="date" value="2023-12-07">
+
+                    </td>
+
+
+                </tr>
+
+
+
+
+                <tr>
+                    
+                    <td><!--LABEL-->
+                        
+                    </td>
+
+                    <td><!--INPUT-->
+                        <input type="submit" value="submit">
+                    </td>
+
+                </tr>
+
+
+
+                
+            </tbody>
+
+        </table>
+    </form>    
+
+
+
+</body>
+</html>
