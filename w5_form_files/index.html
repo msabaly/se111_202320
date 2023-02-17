@@ -43,9 +43,9 @@
                    </td>
 
                     <td><!--second data cell in row (right)-->
-                        <input type="text" name="firstname" id="firstname" placeholder="First Name">
+                        <input type="text" required maxlength="20" name="firstname" id="g-first" placeholder="First Name">
                         <br>
-                        <input type="text" name="lastname" id="lastname" placeholder="Last Name">
+                        <input type="text" required maxlength="20" name="lastname" id="g-last" placeholder="Last Name">
                     </td>
 
                 </tr>
@@ -57,7 +57,7 @@
                     </td>
 
                     <td><!--INPUT-->
-                        <input type="text" name="child's name" id="childname" placeholder="Child's First Name" >
+                        <input type="text" required name="child's name" id="c-first" placeholder="Child's First Name" >
                     </td>
 
 
@@ -69,7 +69,7 @@
                     </td>
 
                     <td><!--INPUT-->
-                        <input type="text" name="child's Age" id="childage" placeholder="Child's Age" >
+                        <input type="text" required name="child's Age" id="age" placeholder="Child's Age" >
                     </td>
 
 
@@ -90,7 +90,7 @@
                     </td>
 
                     <td><!--RIGHT COLUMN (inputs)-->
-                        <input type="date" name="date" value="">
+                        <input type="date" required name="date" >
 
                     </td>
 
@@ -104,7 +104,7 @@
                     </td>
 
                     <td><!--RIGHT COLUMN (inputs)-->
-                        <input type="time" name="Start Time" >
+                        <input type="time" required name="time" >
 
                     </td>
 
@@ -118,7 +118,7 @@
                     </td>
 
                     <td><!--INPUT-->
-                        <input type="text" name="number of guests" id="numberguests"  >
+                        <input type="number" name="guests" value="5" >
                     </td>
 
 
@@ -139,8 +139,8 @@
 
                     <td><!--RIGHT COLUMN (inputs)-->
                         <input type="radio" name="size" value="small">sm
-                        <input type="radio" name="size" value="CYB">med
-                        <input type="radio" name="size" value="WD">lg
+                        <input type="radio" name="size" value="mediuM">med
+                        <input type="radio" name="size" value="LARGEE">lg
                        
                     </td>
 
@@ -155,11 +155,11 @@
                     </td>
 
                     <td><!--RIGHT COLUMN (inputs)-->
-                        <input type="checkbox" name="drinks1" value="car">Coke<br>
-                        <input type="checkbox" name="drinks2" value="roci">Sprite <br>
-                        <input type="checkbox" name="drinks3" value="bike">fruit punch <br>
-                        <input type="checkbox" name="drinks4" value="dragon">lemonade<br>
-                        <input type="checkbox" name="drinks5" value="dragon">Iced Tea<br>
+                        <input type="checkbox" name="drinks1" checked="true" value="coke">Coke<br>
+                        <input type="checkbox" name="drinks2" value="sprite">Sprite<br>
+                        <input type="checkbox" name="drinks3" value="sprite">fruit punch <br>
+                        <input type="checkbox" name="drinks4" value="sprite">lemonade<br>
+                        <input type="checkbox" name="drinks5" value="sprite">Iced Tea<br>
 
 
                     </td>
@@ -175,7 +175,7 @@
                     </td>
 
                     <td><!--RIGHT COLUMN (inputs)-->
-                        <select name="favecolor"><!--creates the drop down-->
+                        <select name="cake"><!--creates the drop down-->
 
                             <!--list of each optiom in drop down-->
                             <option value="Chocolate">Chocolate</option>
@@ -206,7 +206,7 @@
 
                     <td><!--RIGHT COLUMN (inputs)-->
                         Choose a color scheme for the party <br>
-                        <input type="color" name="color" value="color">
+                        <input type="color" name="colors">
                      
 
 
