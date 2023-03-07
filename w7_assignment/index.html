@@ -106,7 +106,7 @@
 
     <script>
         //edit the below statement to select the #enter-button id from the HTML file
-        document.querySelector(`#submit`).addEventListener(`click`, alertName)
+      
 
 
         document.querySelector(`#enter-button`).addEventListener(`click`, alertName)
@@ -145,8 +145,7 @@
 
             //convert both hours and rate to Number() data types
 
-            var rate = Number(rate)
-            var hours = Number(hours)
+
            
 
             //NOTE: DO NOT MOVE ON UNTIL YOU ARE ABLE TO DISPLAY THE CORRECT VALUES! This is a practice in testing as you build! 
@@ -158,14 +157,16 @@
             var rate = document.querySelector(`#rate`).value
             var hours = document.querySelector(`#hours`).value
 
+            var rate = Number(rate)
+            var hours = Number(hours)
 
             var gross = rate * hours 
-            var tax = gross * 0.2
-            var net = gross - tax 
+            var taxAmount = gross * 0.2
+            var net = gross - taxAmount
 
             //console.log() all three processed values, rounded to the second decimal place
            
-            console.log(`Based on your hourly rate of $ ${rate} and ${hours} worked:\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${tax.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
+            console.log(`Based on your hourly rate of $ ${rate} and ${hours} worked:\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`)
 
 
             //create a new variable called 'finalMessage' that holds the literal string value of the following, each value on a new line (use <br>): full name, hours worked*, hourly rate*   *--> rounded to the second decimal place 
@@ -199,12 +200,12 @@
 
             //edit the innerHTML of the #check element (now the 'check' js var) to hold a literal string with the following values: gross pay, tax amount, net pay. All three values should be rounded to the second decimal place.  Use <br> to break onto a new line for each value
 
-            check.innerHTML += `Based on your hourly rate of $ ${rate} and ${hours} worked:\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${tax.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`
+            check.innerHTML += `Based on your hourly rate of $ ${rate} and ${hours} worked:\nGROSS PAY: $${gross.toFixed(2)}\nTAX AMOUNT: $${taxAmount.toFixed(2)}\nNET PAY: $${net.toFixed(2)}`
 
             //add a 'click' event listener to the #submit HTML element (HINT: this is the first step in the <script> )
             //when the #submit button is clicked, the submitNow function should run
 
-        
+            document.querySelector(`#submit`).addEventListener(`click`, submitNow)
             function submitNow(e)
             {
 
