@@ -36,10 +36,20 @@
     <script>
 	
 		//Store the elements (tags) in variables
-		
+		var name = "Moustapha"
+        console.log(name)
 
 		//Make an array to store the people
-		
+		var people = [
+            "Moustapha", 
+            "Jay", 
+            "Spencer", 
+            "Luigi", 
+            "Dan", 
+        ]
+
+		console.log(people)
+        console.log(people[0])
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
 		
@@ -60,24 +70,26 @@
 		--------------------------------------------------------*/
 
 		function calcAndDisplay(e)
+
 		{
 			//Create an object called person.
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
 
-            var person = {
+			var person = {
+            	first: `Moustapha`,
+            	last: `Sabaly`,
+            }
 
-
-
-            }//end of person object
-
-
+		
+			}//end of person object
+			console.log(person)
 
 
 			//Add the person object into the people array by using the .push() array method.
-			
-
+			people.push(`Ryan`) 
+			console.log(people)
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
 			{
