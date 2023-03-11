@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -33,23 +34,55 @@
 
 	<!--The script tag should go after the HMTL, but inside of the body.-->
 	<!--JavaScript cannot find tags, if they are not parsed before the script runs-->
-	<script>
+    <script>
 	
 		//Store the elements (tags) in variables
-		var fname = document.querySelector(`#first`)
-		var lname = document.querySelector(`#last`)
+		var name = "Moustapha"
+        console.log(name)
 
 		//Make an array to store the people
 		var people = [
-			"Moustapha", 
+            "Moustapha", 
             "Jay", 
             "Spencer", 
             "Luigi", 
             "Dan", 
-		]
+        ]
+
+		console.log(people)
+        console.log(people[0])
 
 		//Make the button clickable. When clicked it calls the calcAndDisplay function.
+
+		var submit = document.querySelector(`#submit`)
 		document.querySelector(`#button`).addEventListener(`click`, calcAndDisplay)
+		function calcAndDisplay(e)
+
+  		{
+    	alert("Hi");
+  		}
+
+
+
+
+
+		var firstName = people[0]
+        console.log(firstName)
+
+        console.log(`The length of the people array is ${people.length}`)
+
+		people[5] = "Sebastian"
+        console.log(people)
+
+        people.push(`Ryan`) 
+        console.log(people)
+
+
+        people.push(
+            prompt(`Enter a name to add to the array: `)
+            )
+        console.log(people)
+
 		
 		/*-----------------------------------------------------
 		Will add objects into the people array. 
@@ -66,26 +99,26 @@
 			_________________________
 		--------------------------------------------------------*/
 
-		function calcAndDisplay(e)
+		
 		{
 			//Create an object called person.
 			//Add the following properties:
 			    //1. first: will be a string that uses the first Input's value
 				//2. last: will be a string that uses the last Input's value
 
-            var person = {
+			var person = {
+            	first: `Moustapha`,
+            	last: `Sabaly`,
+            }
 
-				first: fname.value, 
-				last: lname.value
-
-            }//end of person object
-
-
+		
+			}//end of person object
+			console.log(person)
 
 
 			//Add the person object into the people array by using the .push() array method.
-			people.push(person)
-
+			person.push(`Moustapha`) 
+			console.log(person)
 			//Bubble sort people on the last name
 			for(let i=0; i < people.length-1; i++)
 			{
@@ -101,39 +134,54 @@
 			}//end of bubble sort algorithm!
 
 			//console.log the people array to check that the people array is formatted correctly and is populated with the correct objects
-			console.log(people)
+			console.log(associativePeople[`cat`])
 
 			//create a variable called 'output' that has an empty string value stored to 
 			var output = ``
 
 			//Loop through the objects in the people array
-			for(let i = 0; i < people.length; i++)
+			for(let index = 0; index < people.length; index++)
             {
 
 				//Loop through each property in the object
 				for(key in people[i])
-                {
+				{  	 {
+            			console.log(`${key}: ${person1[key]}`)
+      				  }
 					//The output should use the key set to uppercase using the .toUpperCase() String method as a title and the value of the key.
 					//Output will resemble:
 					//FIRST: Ivan
 					//LAST: Drago
-					output += `<p><b>${key}:</b> ${people[i][key]}</p>`
+					output += `<h3>INFO FOR ${humans[i].first} :</h3>`            
+            		for(let key in humans[i])
+           			 {//this loop displays each key+value pair within the object (humans[i])
+                	output += `<p><b>${key.toUpperCase()}</b>: ${humans[i][key]}</p>`
+
+           			 }
+
+          		  output += `<hr>`
+
+			
+
 				
 
                 }
                 //add a <hr> to the output at the end of this outter loop so a horizontal rule is displayed inbetween each person being displayed to the screen.
-				output += `<hr>`
+				
 
 
-			}//end of loop going through people array to edit 'output'
+			//end of loop going through people array to edit 'output'
 
 				//log the output string
+
 				//replace the outputDiv's inner HTML with the output string
-				document.querySelector(`#output`).innerHTML = output
+				
 
 
 
-		}
+		} 
+		document.querySelector(`#output`).innerHTML = output
+
 	
     </script>
     
